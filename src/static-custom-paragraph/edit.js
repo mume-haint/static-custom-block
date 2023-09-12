@@ -29,7 +29,6 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
-	console.log('edit', attributes.content)
 	return (
 		<RichText
 			{ ...useBlockProps() }

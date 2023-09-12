@@ -16,7 +16,6 @@ import {RichText, useBlockProps} from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 export default function save({attributes}) {
-	console.log('save', attributes.content)
 	return (
 		<RichText.Content
 			{...useBlockProps.save()}
