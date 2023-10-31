@@ -9,7 +9,13 @@
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {
-    "html": false
+    "html": true,
+    "align": true,
+    "color": {
+      "gradients": true,
+      "background": false,
+      "text": true
+    }
   },
   "textdomain": "static-custom-group",
   "editorScript": "file:./index.js",

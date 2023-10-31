@@ -22,6 +22,5 @@ export default function save({attributes}) {
 			tagName="p"
 			value={attributes.content}
 		/>
-
 	);
 }

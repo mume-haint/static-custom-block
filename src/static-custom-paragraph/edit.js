@@ -1,40 +1,74 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
+import {
+	AlignmentToolbar,
+	BlockControls,
+	RichText,
+	useBlockProps,
+	InspectorControls
+} from '@wordpress/block-editor';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import {RichText, useBlockProps} from '@wordpress/block-editor';
+import {__} from '@wordpress/i18n';
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
+import {ColorPalette} from "@wordpress/components";
+
 import './editor.scss';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
 export default function Edit({attributes, setAttributes}) {
+	const onChangeAlignment = (newAlignment) => {
+		setAttributes({
+			alignment: newAlignment === undefined ? 'none' : newAlignment,
+		});
+	};
+
+	const onChangeBGColor = (hexColor) => {
+		setAttributes({bg_color: hexColor});
+	};
+
+	const onChangeTextColor = (hexColor) => {
+		setAttributes({text_color: hexColor});
+	};
+
 	return (
-		<RichText
-			{ ...useBlockProps() }
-			tagName="p"
-			onChange={(content) => setAttributes({content}) }
-			value={ attributes.content }
-		/>
+		<>
+			<BlockControls>
+				<AlignmentToolbar
+					value={attributes.alignment}
+					onChange={onChangeAlignment}
+				/>
+			</BlockControls>
+
+			<InspectorControls>
+				<div id="gutenpride-controls">
+					<fieldset>
+						<legend className="blocks-base-control__label">
+							{__('Background color', 'gutenpride')}
+						</legend>
+						<ColorPalette
+							onChange={onChangeBGColor}
+						/>
+					</fieldset>
+					<fieldset>
+						<legend className="blocks-base-control__label">
+							{__('Text color', 'gutenpride')}
+						</legend>
+						<ColorPalette
+							onChange={onChangeTextColor}
+						/>
+					</fieldset>
+				</div>
+			</InspectorControls>
+
+			<RichText
+				{...useBlockProps()}
+				style={{
+					textAlign: attributes.alignment,
+					backgroundColor: attributes.bg_color,
+					color: attributes.text_color,
+				}}
+				tagName="p"
+				onChange={(content) => setAttributes({content})}
+				value={attributes.content}
+				placeholder='Edit custom paragraph...'
+			/>
+		</>
 	);
 }

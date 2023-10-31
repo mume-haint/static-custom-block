@@ -1,0 +1,99 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/static-custom-row/editor.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-create-block-static-custom-row > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: flex;
+}
+
+.wp-block-create-block-static-custom-row > .block-editor-inner-blocks > .block-editor-block-list__layout > * {
+  margin: 0;
+}
+
+.static-row > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  flex-direction: row;
+}
+
+.static-column > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  flex-direction: column;
+}
+
+.static-row-reverse > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  flex-direction: row-reverse;
+}
+
+.static-column-reverse > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  flex-direction: column-reverse;
+}
+
+.static-row-left > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  justify-content: left;
+}
+
+.static-row-right > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  justify-content: right;
+}
+
+.static-row-between > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  justify-content: space-between;
+}
+
+.static-row-evenly > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  justify-content: space-evenly;
+}
+
+.static-column-start > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  align-items: start;
+}
+
+.static-column-end > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  align-items: end;
+}
+
+.static-column-center > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  align-items: center;
+}
+
+.static-column-stretch > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  align-items: stretch;
+}
+
+@media (max-width: 762px) {
+  .mobile-static-row > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    flex-direction: row;
+  }
+  .mobile-static-column > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    flex-direction: column;
+  }
+  .mobile-static-row-reverse > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    flex-direction: row-reverse;
+  }
+  .mobile-static-column-reverse > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    flex-direction: column-reverse;
+  }
+  .mobile-static-row-left > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: left;
+  }
+  .mobile-static-row-right > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: right;
+  }
+  .mobile-static-row-between > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: space-between;
+  }
+  .mobile-static-row-evenly > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    justify-content: space-evenly;
+  }
+  .mobile-static-column-start > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    align-items: start;
+  }
+  .mobile-static-column-end > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    align-items: end;
+  }
+  .mobile-static-column-center > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    align-items: center;
+  }
+  .mobile-static-column-stretch > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    align-items: stretch;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

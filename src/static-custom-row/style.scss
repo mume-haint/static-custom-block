@@ -1,0 +1,19 @@
+.wp-block-create-block-static-custom-row {
+	display: flex;
+}
+
+.static-row {
+	flex-direction: row;
+}
+
+.static-column {
+	flex-direction: column;
+}
+
+.static-row-reverse {
+	flex-direction: row-reverse;
+}
+
+.static-column-reverse {
+	flex-direction: column-reverse;
+}

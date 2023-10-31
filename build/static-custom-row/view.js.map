@@ -1,0 +1,1 @@
+{"version":3,"file":"static-custom-row/view.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAC,MAAM,CAAC,C","sources":["webpack://static-custom-block/./src/static-custom-row/view.js"],"sourcesContent":["console.log('test')\n"],"names":["console","log"],"sourceRoot":""}
